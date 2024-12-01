@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1186</width>
+    <height>799</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Input image</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectinput">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="input">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>301</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>50</y>
+      <width>101</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>Mask size</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Mask size</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3x3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5x5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7x7</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9x9</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11x11</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>90</y>
+      <width>611</width>
+      <height>381</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>389</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Output image</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="output">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>301</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="convolution">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>50</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Masking</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="gaussian_K">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>60</y>
+      <width>65</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.200000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="gaussian_sigma">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>60</y>
+      <width>65</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.500000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>10</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Gaussian parameter σ</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>10</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Gaussian parameter K</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Laplacian">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>500</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laplacian</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="localenhancement">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>660</y>
+      <width>151</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Local Enhancement</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>660</y>
+      <width>161</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Select region size</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3x3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5x5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7x7</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9x9</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11x11</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSpinBox" name="parameter_c">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>660</y>
+      <width>44</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-50</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sobeloperators">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>580</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sobel Operators</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zerocrossing">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>500</y>
+      <width>121</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zero Crossing</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>650</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enhance parameter C</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1186</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
